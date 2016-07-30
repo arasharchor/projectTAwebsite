@@ -1,7 +1,7 @@
 -----Instructions to run ----
 
 
-1. NodeJS must be installed. - https://nodejs.org/en/ (for windows)
+1. NodeJS must be installed. - https://nodejs.org/en/ 
 2. use cmd to go to folder TriparoundSite via "cd <Pfad>" -> dir gives folder content.
 3. enter: npm install
 4. enter: npm install express
