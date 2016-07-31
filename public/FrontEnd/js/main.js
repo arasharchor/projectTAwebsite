@@ -71,7 +71,7 @@ function homeinit(){
       $("#header").fadeOut(500, function(){
         $(this).text("We make trips better").fadeIn(500);
         $(this).fadeOut(500,function () {
-          $(this).text("TripEver").fadeIn(500);
+          $(this).text("Smart Trip").fadeIn(500);
         });
 
       });
