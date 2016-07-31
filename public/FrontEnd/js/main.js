@@ -220,6 +220,36 @@ function imagecontroller(){
             lat = (lat[0] + lat[1] / 60 + lat[2] / 3600) * (latRef == "N" ? 1 : -1);
             lon = (lon[0] + lon[1] / 60 + lon[2] / 3600) * (lonRef == "W" ? -1 : 1);
 
+            
+            
+                         var x=new google.maps.LatLng(52.395715,4.888916);
+var stavanger=new google.maps.LatLng(0.2323,-0.2323);
+var amsterdam=new google.maps.LatLng(45.531419416666665,-98.4128916388889);
+
+
+var mapProp = {
+  center:x,
+  zoom:4,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var myTrip=[stavanger,amsterdam];
+var flightPath=new google.maps.Polyline({
+  path:myTrip,
+  strokeColor:"#0000FF",
+  strokeOpacity:0.8,
+  strokeWeight:2
+  });
+
+flightPath.setMap(map);
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+            
+            
+            
             console.log("Latitide : " + lat);
             console.log("Longitude : " + lon);
             socket.emit('Latitude', lat);
